@@ -7,6 +7,7 @@ body {
   background-image: url("dusty_background.jpg");
   color:black;
   font-family: "Oswald", sans-serif;
+    letter-spacing: 0.1em;
 }
 
 .title {
@@ -100,19 +101,34 @@ body {
   margin-top:20px;
 }
 
-.sideitem {
-  margin:7px;
-  height:100%;
-  width:100%;
-  position:relative;
-  color:white;
-  font-family: "Oswald", sans-serif;
-
+.marg {
+  margin:10px;
 }
 
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.smallertext {
+  font-size: .7em;
+}
+
+.smallp {
+  font-size: .5em;
+}
+
+.postmarg {
+  font-size:1.3em;
+  margin:10px;
+  font-weight:700;
+}
+
+.blogflex {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.blogmarg {
+  margin-left:8px;
+  margin-right:8px;
+}
+
+.topmarg {
+  margin:10px;
 }
