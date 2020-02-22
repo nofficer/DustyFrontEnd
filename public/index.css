@@ -1,0 +1,118 @@
+#jumbo {
+  margin-bottom:0px;
+  background-color: white;
+}
+
+body {
+  background-image: url("dusty_background.jpg");
+  color:black;
+  font-family: "Oswald", sans-serif;
+}
+
+.title {
+  text-align:center;
+  font-family: "Oswald", sans-serif;
+  color:#00a9ff;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 2.5em;
+  line-height: 1.6;
+}
+
+.right {
+  text-align: right;
+}
+
+.margina {
+  padding:4px;
+}
+
+.navborder {
+  border-top: .5px solid black;
+  border-bottom: 4px solid black;
+}
+
+.itemborder {
+  border-right: .5px solid black;
+  border-left: .5px solid black;
+}
+
+#greything {
+  color:grey;
+}
+
+#blackitem {
+  color:black;
+  font-size: 1.1em;
+  font-weight: 550;
+  letter-spacing: 0.1em;
+
+}
+
+#blackitem:hover {
+  color:#00a9ff;
+  transition: 0.3s;
+}
+
+.whiteitem {
+  background-color: white;
+}
+
+.slide-desc {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#carouseldesc {
+  margin-bottom:7em;
+}
+
+#hovermore:hover {
+  color:#00a9ff;
+  transition: 0.3s;
+  cursor:pointer;
+}
+
+.sidebox {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hfix {
+  height:10em;
+  width:10em;
+}
+
+.whiteblock {
+  background-color:white;
+}
+
+.landingscroll {
+  width:100%;
+  float:left;
+  margin-top:20px;
+}
+
+.sideitem {
+  margin:7px;
+  height:100%;
+  width:100%;
+  position:relative;
+  color:white;
+  font-family: "Oswald", sans-serif;
+
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
