@@ -28,12 +28,13 @@ class Landing extends React.Component {
               <Articles/>
             </div>
             <div class="col-4">
-            <TwitterTimelineEmbed
-              sourceType="profile"
-              screenName="dustyorgan"
-              options={{height: 400}}
-              />
-
+            <div className='noscroll'>
+              <TwitterTimelineEmbed
+                sourceType="profile"
+                screenName="dustyorgan"
+                options={{height: 400}}
+                />
+              </div>
             </div>
           </div>
         </div>

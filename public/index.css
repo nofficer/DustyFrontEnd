@@ -67,10 +67,15 @@ body {
   margin-bottom:7em;
 }
 
+#hovermore  {
+  font-weight:700;
+}
+
 #hovermore:hover {
   color:#00a9ff;
   transition: 0.3s;
   cursor:pointer;
+  text-decoration: none;
 }
 
 .sidebox {
@@ -131,4 +136,13 @@ body {
 
 .topmarg {
   margin:10px;
+}
+
+.noscroll {
+  position:sticky;
+}
+
+.whiteC {
+  background-color: white;
+  text-align:center;
 }

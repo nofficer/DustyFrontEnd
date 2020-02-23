@@ -16,7 +16,7 @@ class Header extends React.Component {
     return (
       <div>
         <div class='jumbotron' id="jumbo">
-        <h2 class='title'><a>DUSTY ORGAN</a></h2>
+        <h2 class='title'><Link onClick={(e) => e.stopPropagation()} to={`/`} id='hovermore'>DUSTY ORGAN</Link></h2>
         <div class="container">
           <div class="row">
             <div class="col-sm">
