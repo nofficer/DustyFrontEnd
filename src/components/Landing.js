@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import Carousel from './Carousel'
 import SideBox from './SideBox'
 import Articles from './Articles'
-
+import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+import Fbfeed from './fb'
 
 class Landing extends React.Component {
   componentDidMount() {
@@ -27,7 +28,12 @@ class Landing extends React.Component {
               <Articles/>
             </div>
             <div class="col-4">
-              Social Media Feeds go here
+            <TwitterTimelineEmbed
+              sourceType="profile"
+              screenName="dustyorgan"
+              options={{height: 400}}
+              />
+
             </div>
           </div>
         </div>
