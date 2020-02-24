@@ -33,17 +33,18 @@ class ArticlesCat extends React.Component {
     else {
       var term = null
     }
-
     var i = 0
     return(
       this.props.articles.map((article) => {
         if(!term && article.category==this.props.category){
           return this.createArticle(article)
         }
-        else if(term && article.items.artist.join().includes(term) || article.title.includes(term) && article.category == this.props.category){
+        else if(term && (article.items.artist.join().includes(term) || article.title.includes(term)) && article.category == this.props.category){
+          console.log(this.props.category)
           return this.createArticle(article)
         }
-        else if(!this.props.category && article.items.artist.join().includes(term) || article.title.includes(term) ) {
+        else if(!this.props.category && (article.items.artist.join().includes(term) || article.title.includes(term) )) {
+          console.log(this.props.category)
           return this.createArticle(article)
         }
         else if(!this.props.category && !term) {

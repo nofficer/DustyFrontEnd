@@ -18,7 +18,10 @@ class Header extends React.Component {
     return (
       <div>
         <div class='jumbotron' id="jumbo">
-        <h2 class='title' ><Link onClick={(e) => e.stopPropagation()} to={`/`} id='hovermore'>DUSTY ORGAN</Link></h2>
+        <h2 class='title' ><Link onClick={(e) => {e.stopPropagation()
+            this.props.categoryAction(null)
+            this.props.goSearch(null)
+        }} to={`/`} id='hovermore'>DUSTY ORGAN</Link></h2>
         <div class="container">
           <div class="row">
             <div class="col-sm">
@@ -49,20 +52,20 @@ class Header extends React.Component {
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a id="blackitem" class="dropdown-item" href="#">ALBUM</a>
         <a id="blackitem" class="dropdown-item" href="#">SINGLES</a>
-        <Link to='/Reviews' id="blackitem" onClick={(e) => this.props.categoryAction('REVIEW')} class="dropdown-item" href="#">REVIEWS</Link>
+        <a  href="#" id="blackitem" onClick={(e) => this.props.categoryAction('REVIEW')} class="dropdown-item" href="#">REVIEWS</a>
         <a id="blackitem" class="dropdown-item" href="#">WEEK OF</a>
         <a id="blackitem" class="dropdown-item" href="#">EPS</a>
       </div>
     </li>
       <li class="nav-item">
-        <Link onClick={(e) => this.props.categoryAction('INPO')} to='/In_No_Particular_Order' id="blackitem" class="nav-link itemborder" href="#">IN NO PARTICULAR ORDER<span class="sr-only">(current)</span></Link>
+        <a href="#" onClick={(e) => this.props.categoryAction('INPO')}  id="blackitem" class="nav-link itemborder" href="#">IN NO PARTICULAR ORDER<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a id="blackitem" class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           BLOG
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <Link to='/Festival_Guides'onClick={(e) => this.props.categoryAction('FEST')} id="blackitem" class="dropdown-item" href="#">FESTIVAL GUIDES</Link>
+          <a  href="#" onClick={(e) => this.props.categoryAction('FEST')} id="blackitem" class="dropdown-item" href="#">FESTIVAL GUIDES</a>
           <a id="blackitem" class="dropdown-item" href="#">CONCERT GALLERY</a>
           <a id="blackitem" class="dropdown-item" href="#">INTERVIEWS</a>
           <a id="blackitem" class="dropdown-item" href="#">CONTESTS</a>

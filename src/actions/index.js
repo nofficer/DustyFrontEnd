@@ -14,11 +14,5 @@ export const categoryAction = (c) => {
 }
 
 export const goSearch = (term) => {
-  if(term != ''){
-    history.push('/Search='+term)
-  }
-  else {
-    history.push('/')
-  }
   return {type:SEARCH, payload: term}
 }

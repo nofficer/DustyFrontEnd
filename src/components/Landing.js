@@ -14,7 +14,7 @@ class Landing extends React.Component {
   }
 
   render() {
-
+    if(!this.props.category && !this.props.search) {
       return (
         <div class="container whiteblock">
           <div class="row">
@@ -26,7 +26,7 @@ class Landing extends React.Component {
             </div>
             <div class='row'>
               <div class='col-8'>
-                <Articles/>
+                <ArticlesCat/>
               </div>
               <div class="col-4">
               <div className='noscroll'>
@@ -44,11 +44,39 @@ class Landing extends React.Component {
 
       )
     }
+    else {
+      return (
+        <div class="container whiteblock">
+          <div class="row">
+            <div class='row'>
+              <div class='col-8'>
+                <ArticlesCat/>
+              </div>
+              <div class="col-4">
+              <div className='noscroll'>
+                <TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName="dustyorgan"
+                  options={{height: 400}}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      )
+    }
+
+
+    }
   }
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    category: state.category.category
+    category: state.category.category,
+    search: state.category.search
   }
 }
 
