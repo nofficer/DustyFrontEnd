@@ -14,7 +14,7 @@ class Articles extends React.Component {
     return(
       <div class='Container'>
         <h2 className='blog post postmarg'>
-        <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/${article._id}`}>{article.title}</Link>
+        <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/article/${article._id}`}>{article.title}</Link>
         </h2>
         <div class='blogflex'>
         <p class='blogmarg'>{article.date}</p>

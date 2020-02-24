@@ -17,8 +17,9 @@ const App = () => {
         <div className='container2'>
           <Switch>
             <Route path='/' exact component={Landing} />
+            <Route path='/article/:id' exact component={ArticleShow} />
             <Route path='/:category' exact component={LandingCat} />
-            //<Route path='/:id' exact component={ArticleShow} />
+
           </Switch>
           </div>
         </div>

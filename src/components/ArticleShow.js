@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { connect } from 'react-redux'
-import {fetchArticles} from '../actions'
+import {fetchArticles, goSearch, categoryAction} from '../actions'
 
 import YouTube from 'react-youtube-embed'
 
@@ -9,7 +9,6 @@ import YouTube from 'react-youtube-embed'
 class ArticleShow extends React.Component {
   componentDidMount() {
       this.props.fetchArticles()
-
   }
 
   createArticle(article){
@@ -53,4 +52,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps, {fetchArticles})(ArticleShow)
+export default connect(mapStateToProps, {fetchArticles, goSearch, categoryAction})(ArticleShow)

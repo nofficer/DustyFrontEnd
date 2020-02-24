@@ -75,7 +75,7 @@ class Header extends React.Component {
         <a id="blackitem" class="nav-link " href="#">PODCAST</a>
       </li>
       <form class="form-inline my-2 my-lg-0 goright">
-      <input onChange={(e) => this.props.goSearch(e.target.value)} class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+      <input onChange={(e) => this.props.goSearch(e.target.value)} value={this.props.search} class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
     </ul>
@@ -88,7 +88,7 @@ class Header extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-
+    search: state.category.search
   }
 }
 
