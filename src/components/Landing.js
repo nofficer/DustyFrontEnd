@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Carousel from './Carousel'
 import SideBox from './SideBox'
-import Articles from './Articles'
+
 import ArticlesCat from './ArticlesCat'
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 import Fbfeed from './fb'
@@ -33,7 +33,7 @@ class Landing extends React.Component {
                 <TwitterTimelineEmbed
                   sourceType="profile"
                   screenName="dustyorgan"
-                  options={{height: 400}}
+                  options={{height: 3000}}
                   />
                 </div>
               </div>
@@ -57,7 +57,7 @@ class Landing extends React.Component {
                 <TwitterTimelineEmbed
                   sourceType="profile"
                   screenName="dustyorgan"
-                  options={{height: 400}}
+                  options={{height: 3000}}
                   />
                 </div>
               </div>

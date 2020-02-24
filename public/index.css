@@ -146,7 +146,7 @@ body {
 
 .whiteC {
   background-color: white;
-  text-align:center;
+  text-align:left;;
 }
 
 .goright {
@@ -157,5 +157,68 @@ body {
 .zoom:hover {
   transform:scale(1.05);
   transition: .8s;
+  cursor:pointer;
+}
+
+.inpoleft {
+  text-align:left;
+}
+
+.playercontainer {
+  height:100%;
+  width:100%;
+  padding-right:15px;
+}
+
+#playfair {
+  margin-top:17px;
+  font-family: 'Playfair Display';
+  font-size:1em;
+}
+
+#oldstandard {
+  font-family: 'Old Standard TT';
+  font-size:1.5em;
+}
+
+#oldstandard2 {
+  font-family: 'Old Standard TT';
+  font-size:1em;
+}
+
+.centertext {
+  text-align:center;
+}
+
+.padtop {
+  padding-top:15px;
+}
+
+.linkGrey {
+  color:grey;
+  text-decoration: none;
+}
+
+.linkGrey:hover {
+  text-decoration: none;
+}
+
+.reviewText {
+  text-align: left;
+}
+
+#hovermore2  {
+  color:black;
+  font-weight:700;
+}
+
+#hovermore2:hover {
+  color:#00a9ff;
+  transition: 0.3s;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+.imghover:hover {
   cursor:pointer;
 }

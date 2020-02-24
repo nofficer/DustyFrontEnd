@@ -52,20 +52,20 @@ class Header extends React.Component {
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <a id="blackitem" class="dropdown-item" href="#">ALBUM</a>
         <a id="blackitem" class="dropdown-item" href="#">SINGLES</a>
-        <a  href="#" id="blackitem" onClick={(e) => this.props.categoryAction('REVIEW')} class="dropdown-item" href="#">REVIEWS</a>
+        <Link  to='/' id="blackitem" onClick={(e) => this.props.categoryAction('REVIEW')} class="dropdown-item" href="#">REVIEWS</Link>
         <a id="blackitem" class="dropdown-item" href="#">WEEK OF</a>
         <a id="blackitem" class="dropdown-item" href="#">EPS</a>
       </div>
     </li>
       <li class="nav-item">
-        <a href="#" onClick={(e) => this.props.categoryAction('INPO')}  id="blackitem" class="nav-link itemborder" href="#">IN NO PARTICULAR ORDER<span class="sr-only">(current)</span></a>
+        <Link to='/' onClick={(e) => this.props.categoryAction('INPO')}  id="blackitem" class="nav-link itemborder" href="#">IN NO PARTICULAR ORDER<span class="sr-only">(current)</span></Link>
       </li>
       <li class="nav-item dropdown">
         <a id="blackitem" class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           BLOG
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a  href="#" onClick={(e) => this.props.categoryAction('FEST')} id="blackitem" class="dropdown-item" href="#">FESTIVAL GUIDES</a>
+          <Link to='/' onClick={(e) => this.props.categoryAction('FEST')} id="blackitem" class="dropdown-item" >FESTIVAL GUIDES</Link>
           <a id="blackitem" class="dropdown-item" href="#">CONCERT GALLERY</a>
           <a id="blackitem" class="dropdown-item" href="#">INTERVIEWS</a>
           <a id="blackitem" class="dropdown-item" href="#">CONTESTS</a>

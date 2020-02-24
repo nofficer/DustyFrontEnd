@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import {fetchArticles, categoryAction} from '../actions'
+import history from '../history'
 
 
 class ArticlesCat extends React.Component {
@@ -14,14 +15,14 @@ class ArticlesCat extends React.Component {
     return(
       <div class='Container'>
         <h2 className='blog post postmarg'>
-        <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/article/${article._id}`}>{article.title}</Link>
+        <Link id='hovermore2' onClick={(e) => e.stopPropagation()} to={`/article/${article._id}`}>{article.title}</Link>
         </h2>
         <div class='blogflex'>
         <p class='blogmarg'>{article.date}</p>
         <p class='blogmarg'>Kane Wilkinson</p>
         </div>
-        <img class="img-fluid" alt="Responsive image" src={article.imageUrl}/>
-        <p class='topmarg'>{article.preview}</p>
+        <img onClick={() => history.push(`/article/${article._id}`)} class="img-fluid imghover" alt="Responsive image" src={article.imageUrl}/>
+        <p class='topmarg'>{article.preview}...<Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/article/${article._id}`}>Read More</Link></p>
         <hr/>
       </div>
 

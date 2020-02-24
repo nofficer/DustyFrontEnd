@@ -14,5 +14,6 @@ export const categoryAction = (c) => {
 }
 
 export const goSearch = (term) => {
+  history.push('/')
   return {type:SEARCH, payload: term}
 }
