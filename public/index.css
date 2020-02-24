@@ -153,3 +153,9 @@ body {
   float: right;
   margin-left:50px;
 }
+
+.zoom:hover {
+  transform:scale(1.2);
+  transition: .7s;
+  cursor:pointer;
+}

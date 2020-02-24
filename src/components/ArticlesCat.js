@@ -22,7 +22,9 @@ class ArticlesCat extends React.Component {
         </div>
         <img class="img-fluid" alt="Responsive image" src={article.imageUrl}/>
         <p class='topmarg'>{article.preview}</p>
+        <hr/>
       </div>
+
     )
   }
 

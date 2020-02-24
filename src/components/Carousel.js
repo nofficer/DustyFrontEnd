@@ -16,7 +16,7 @@ class Carousel extends React.Component {
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval='4000' pause='hover'>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src={this.props.articles[0].imageUrl} alt="First slide"/>
+                <img class="d-block w-100 zoom" src={this.props.articles[0].imageUrl} alt="First slide"/>
                 <div id="carouseldesc" class="carousel-caption d-none d-md-block slide-desc">
                 <div class='row'>
                   <div class="col-sm">
@@ -34,7 +34,7 @@ class Carousel extends React.Component {
 
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src={this.props.articles[1].imageUrl} alt="Second slide"/>
+                <img class="d-block w-100 zoom" src={this.props.articles[1].imageUrl} alt="Second slide"/>
                 <div id="carouseldesc" class="carousel-caption d-none d-md-block slide-desc">
                 <div class='row'>
                   <div class="col-sm">
@@ -51,7 +51,7 @@ class Carousel extends React.Component {
                 </div>
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100 " src={this.props.articles[2].imageUrl} alt="Third slide"/>
+                <img class="d-block w-100 zoom" src={this.props.articles[2].imageUrl} alt="Third slide"/>
                 <div id="carouseldesc" class="carousel-caption d-none d-md-block slide-desc">
                 <div class='row'>
                   <div class="col-sm">
