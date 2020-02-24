@@ -18,7 +18,7 @@ class ArticlesCat extends React.Component {
         <Link id='hovermore2' onClick={(e) => e.stopPropagation()} to={`/article/${article._id}`}>{article.title}</Link>
         </h2>
         <div class='blogflex'>
-        <p class='blogmarg'>{article.date}</p>
+        <p class='blogmarg'>{article.thadate.slice(0,10)}</p>
         <p class='blogmarg'>Kane Wilkinson</p>
         </div>
         <img onClick={() => history.push(`/article/${article._id}`)} class="img-fluid imghover" alt="Responsive image" src={article.imageUrl}/>
@@ -54,7 +54,7 @@ class ArticlesCat extends React.Component {
           return this.createArticle(article)
         }
         else {
-          return null
+          return (null)
         }
       })
     )

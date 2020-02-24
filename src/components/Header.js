@@ -31,9 +31,9 @@ class Header extends React.Component {
 
             </div>
             <div class="col-sm right">
-              <a href="#" id='greything' class="fa fa-facebook margina"></a>
-              <a href="#" id='greything' class="fa fa-twitter margina"></a>
-              <a href="#" id='greything' class="fa fa-instagram margina"></a>
+              <a href="https://facebook.com/dustyorganmusic" id='greything' class="fa fa-facebook margina"></a>
+              <a href="https://twitter.com/DustyOrgan" id='greything' class="fa fa-twitter margina"></a>
+              <a href="https://www.instagram.com/dusty_organ/" id='greything' class="fa fa-instagram margina"></a>
             </div>
           </div>
           </div>
@@ -50,11 +50,8 @@ class Header extends React.Component {
         NEW RELEASES
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a id="blackitem" class="dropdown-item" href="#">ALBUM</a>
-        <a id="blackitem" class="dropdown-item" href="#">SINGLES</a>
-        <Link  to='/' id="blackitem" onClick={(e) => this.props.categoryAction('REVIEW')} class="dropdown-item" href="#">REVIEWS</Link>
-        <a id="blackitem" class="dropdown-item" href="#">WEEK OF</a>
-        <a id="blackitem" class="dropdown-item" href="#">EPS</a>
+        <Link  to='/' id="blackitem" onClick={(e) => this.props.categoryAction('ALBUMS')} class="dropdown-item" href="#">ALBUMS</Link>
+        <Link  to='/' id="blackitem" onClick={(e) => this.props.categoryAction('SINGLES')} class="dropdown-item" href="#">SINGLES</Link>
       </div>
     </li>
       <li class="nav-item">
@@ -66,22 +63,19 @@ class Header extends React.Component {
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <Link to='/' onClick={(e) => this.props.categoryAction('FEST')} id="blackitem" class="dropdown-item" >FESTIVAL GUIDES</Link>
-          <a id="blackitem" class="dropdown-item" href="#">CONCERT GALLERY</a>
-          <a id="blackitem" class="dropdown-item" href="#">INTERVIEWS</a>
-          <a id="blackitem" class="dropdown-item" href="#">CONTESTS</a>
+          <Link to='/' onClick={(e) => this.props.categoryAction('CGAL')} id="blackitem" class="dropdown-item" >CONCERT GALLERY</Link>
         </div>
       </li>
       <li class="nav-item">
-        <a id="blackitem" class="nav-link itemborder" href="#">PLAYLISTS</a>
+        <a id="blackitem" class="nav-link itemborder" href="https://open.spotify.com/user/dustyorgan?si=kTL-cmS9RdeBDclI1CAYrA">SPOTIFY</a>
       </li>
-      <li class="nav-item">
-        <a id="blackitem" class="nav-link " href="#">PODCAST</a>
-      </li>
-      <form class="form-inline my-2 my-lg-0 goright">
-      <input onChange={(e) => this.props.goSearch(e.target.value)} value={this.props.search} class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
     </ul>
+    <div id="goright">
+    <form  class="form-inline my-2 my-lg-0">
+    <input onChange={(e) => this.props.goSearch(e.target.value)} value={this.props.search} class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search"/>
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+  </div>
   </div>
 </nav>
 </div>

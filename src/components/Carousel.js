@@ -16,36 +16,36 @@ class Carousel extends React.Component {
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval='4000' pause='hover'>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100 zoom" src={this.props.articles[0].imageUrl} alt="First slide"/>
+                <img class="d-block w-100 zoom" src={this.props.articles[4].imageUrl} alt="First slide"/>
                 <div id="carouseldesc" class="carousel-caption d-none d-md-block slide-desc">
                 <div class='row'>
                   <div class="col-sm">
-                    {this.props.articles[0].date}
+                    {this.props.articles[4].thadate.slice(0,10)}
                   </div>
                   <div class="col-sm">
                      Kane Wilkinson
                   </div>
                 </div>
-                  <h5>{this.props.articles[0].title}</h5>
-                <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/${this.props.articles[0]._id}`}>
+                  <h5>{this.props.articles[4].title}</h5>
+                <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/${this.props.articles[4]._id}`}>
                   Read More
                   </Link>
                 </div>
 
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100 zoom" src={this.props.articles[1].imageUrl} alt="Second slide"/>
+                <img class="d-block w-100 zoom" src={this.props.articles[0].imageUrl} alt="Second slide"/>
                 <div id="carouseldesc" class="carousel-caption d-none d-md-block slide-desc">
                 <div class='row'>
                   <div class="col-sm">
-                    {this.props.articles[1].date}
+                    {this.props.articles[0].thadate.slice(0,10)}
                   </div>
                   <div class="col-sm">
                      Kane Wilkinson
                   </div>
                 </div>
-                  <h5>{this.props.articles[1].title}</h5>
-                  <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/${this.props.articles[1]._id}`}>
+                  <h5>{this.props.articles[0].title}</h5>
+                  <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/${this.props.articles[0]._id}`}>
                     Read More
                     </Link>
                 </div>
@@ -55,7 +55,7 @@ class Carousel extends React.Component {
                 <div id="carouseldesc" class="carousel-caption d-none d-md-block slide-desc">
                 <div class='row'>
                   <div class="col-sm">
-                    {this.props.articles[2].date}
+                    {this.props.articles[2].thadate.slice(0,10)}
                   </div>
                   <div class="col-sm">
                      Kane Wilkinson

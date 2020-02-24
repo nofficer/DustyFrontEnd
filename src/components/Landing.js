@@ -27,6 +27,7 @@ class Landing extends React.Component {
             <div class='row'>
               <div class='col-8'>
                 <ArticlesCat/>
+                <div className="takespace">NO RESULTS</div>
               </div>
               <div class="col-4">
               <div className='noscroll'>
@@ -51,6 +52,7 @@ class Landing extends React.Component {
             <div class='row'>
               <div class='col-8'>
                 <ArticlesCat/>
+                <div className="takespace">NO RESULTS</div>
               </div>
               <div class="col-4">
               <div className='noscroll'>

@@ -3,12 +3,14 @@ import { connect } from 'react-redux'
 import {fetchArticles, goSearch, categoryAction} from '../actions'
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 import YouTube from 'react-youtube-embed'
-
+import SlideShow from './SlideShow'
 
 class ArticleShow extends React.Component {
   componentDidMount() {
       this.props.fetchArticles()
   }
+
+
 
   inpoHelper(article){
     var i = -1
@@ -47,6 +49,17 @@ class ArticleShow extends React.Component {
   )
   }
 
+  tourHelper(article){
+    if(article.items.tourdates[0]){
+      return (article.items.tourdates.map((date) => {
+        return (
+          <p className='topmarg'>{date}</p>
+        )
+      })
+    )
+    }
+  }
+
   reviewHelper(article){
     var i = -1
     console.log("helper is running")
@@ -57,6 +70,7 @@ class ArticleShow extends React.Component {
           <img class='img' alt='reviewpic' src={article.items.pics[i]}/>
           <p className='topmarg'>{article.items.rating[i]}</p>
           <YouTube aspectRatio='16:9' id={article.items.videos[i]} />
+          <p className='topmarg'>{article.items.words}</p>
         </div>
       )
     })
@@ -90,7 +104,7 @@ class ArticleShow extends React.Component {
           {article.title}
           </h2>
           <div class='blogflex'>
-          <p class='blogmarg'>{article.date}</p>
+          <p class='blogmarg'>{article.thadate.slice(0,10)}</p>
           <p class='blogmarg'>Kane Wilkinson</p>
           </div>
           <img class="img-fluid" alt="Responsive image" src={article.imageUrl}/>
@@ -102,14 +116,31 @@ class ArticleShow extends React.Component {
         </div>
       )
     }
-    else if(article.category=='REVIEW'){
+    else if(article.category=='SINGLES'){
+        return(
+          <div class='Container whiteC'>
+            <h2 className='blog post postmarg'>
+            {article.title}
+            </h2>
+            <div class='blogflex'>
+            <p class='blogmarg'>{article.thadate.slice(0,10)}</p>
+            <p class='blogmarg'>Kane Wilkinson</p>
+            </div>
+            <img class="img-fluid" alt="Responsive image" src={article.imageUrl}/>
+            <p class='topmarg reviewText'>{article.description}</p>
+            {this.reviewHelper(article)}
+          </div>
+        )
+      }
+
+    else if(article.category=='ALBUMS'){
       return(
         <div class='Container whiteC'>
           <h2 className='blog post postmarg'>
           {article.title}
           </h2>
           <div class='blogflex'>
-          <p class='blogmarg'>{article.date}</p>
+          <p class='blogmarg'>{article.thadate.slice(0,10)}</p>
           <p class='blogmarg'>Kane Wilkinson</p>
           </div>
           <img class="img-fluid" alt="Responsive image" src={article.imageUrl}/>
@@ -117,7 +148,8 @@ class ArticleShow extends React.Component {
 
 
           {this.reviewHelper(article)}
-
+          <h3 id='oldstandard' className='topmarg'>Tour Dates</h3>
+          {this.tourHelper(article)}
         </div>
       )
     }
@@ -128,7 +160,7 @@ class ArticleShow extends React.Component {
           {article.title}
           </h2>
           <div class='blogflex'>
-          <p class='blogmarg'>{article.date}</p>
+          <p class='blogmarg'>{article.thadate.slice(0,10)}</p>
           <p class='blogmarg'>Kane Wilkinson</p>
           </div>
           <img class="img-fluid" alt="Responsive image" src={article.imageUrl}/>
@@ -139,19 +171,29 @@ class ArticleShow extends React.Component {
         </div>
       )
     }
-    else {
+    else if(article.category=='CGAL'){
       return(
         <div class='Container whiteC'>
           <h2 className='blog post postmarg'>
           {article.title}
           </h2>
           <div class='blogflex'>
-          <p class='blogmarg'>{article.date}</p>
+          <p class='blogmarg'>{article.thadate.slice(0,10)}</p>
           <p class='blogmarg'>Kane Wilkinson</p>
           </div>
           <img class="img-fluid" alt="Responsive image" src={article.imageUrl}/>
-          <p class='topmarg'>{article.description}</p>
+          <h3 id='oldstandard' className='topmarg'>{article.items.words[0]}</h3>
+          <p class='topmarg reviewText'>{article.description}</p>
           <YouTube aspectRatio='16:9' id={article.items.videos[0]} />
+          <p class='topmarg reviewText'>{article.items.rating[0]}</p>
+          <SlideShow pics={article.items.pics}/>
+        </div>
+      )
+    }
+    else {
+      return(
+        <div class='Container whiteC'>
+          Uh oh. Something went wrong!
         </div>
       )
     }
