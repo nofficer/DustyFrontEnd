@@ -1,6 +1,8 @@
 #jumbo {
   margin-bottom:0px;
   background-color: white;
+  padding-bottom: 1.5em;
+  padding-top: 2em;
 }
 
 body {
@@ -145,4 +147,9 @@ body {
 .whiteC {
   background-color: white;
   text-align:center;
+}
+
+.goright {
+  float: right;
+  margin-left:50px;
 }

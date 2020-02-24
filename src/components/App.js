@@ -2,6 +2,7 @@ import React from 'react'
 import { Router, Route, Switch } from 'react-router-dom'
 import history from '../history'
 import Landing from './Landing'
+import LandingCat from './LandingCat'
 import Header from './Header'
 import ArticleShow from './ArticleShow'
 
@@ -16,6 +17,7 @@ const App = () => {
         <div className='container2'>
           <Switch>
             <Route path='/' exact component={Landing} />
+            <Route path='/:category' exact component={LandingCat} />
             //<Route path='/:id' exact component={ArticleShow} />
           </Switch>
           </div>

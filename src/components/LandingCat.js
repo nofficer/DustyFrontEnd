@@ -8,25 +8,20 @@ import ArticlesCat from './ArticlesCat'
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 import Fbfeed from './fb'
 
-class Landing extends React.Component {
+class LandingCat extends React.Component {
   componentDidMount() {
 
   }
 
   render() {
 
+
       return (
         <div class="container whiteblock">
           <div class="row">
-            <div class="col-8">
-              <Carousel/>
-            </div>
-            <div class="col-4">
-              <SideBox/>
-            </div>
             <div class='row'>
               <div class='col-8'>
-                <Articles/>
+                <ArticlesCat/>
               </div>
               <div class="col-4">
               <div className='noscroll'>
@@ -43,8 +38,9 @@ class Landing extends React.Component {
 
 
       )
-    }
+
   }
+}
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -52,4 +48,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps)(Landing)
+export default connect(mapStateToProps)(LandingCat)
