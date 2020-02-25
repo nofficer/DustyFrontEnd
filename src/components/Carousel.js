@@ -27,7 +27,7 @@ class Carousel extends React.Component {
                   </div>
                 </div>
                   <h5>{this.props.articles[4].title}</h5>
-                <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/${this.props.articles[4]._id}`}>
+                <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/article/${this.props.articles[4]._id}`}>
                   Read More
                   </Link>
                 </div>
@@ -45,7 +45,7 @@ class Carousel extends React.Component {
                   </div>
                 </div>
                   <h5>{this.props.articles[0].title}</h5>
-                  <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/${this.props.articles[0]._id}`}>
+                  <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/article/${this.props.articles[0]._id}`}>
                     Read More
                     </Link>
                 </div>
@@ -62,7 +62,7 @@ class Carousel extends React.Component {
                   </div>
                 </div>
                   <h5>{this.props.articles[2].title}</h5>
-                  <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/${this.props.articles[2]._id}`}>
+                  <Link id='hovermore' onClick={(e) => e.stopPropagation()} to={`/article/${this.props.articles[2]._id}`}>
                     Read More
                     </Link>
                 </div>
