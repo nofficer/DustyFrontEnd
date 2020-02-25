@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import {fetchArticles} from '../actions'
+import history from '../history'
 
 
 class Carousel extends React.Component {
@@ -15,7 +16,7 @@ class Carousel extends React.Component {
         <div className='landingscroll'>
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval='4000' pause='hover'>
             <div class="carousel-inner">
-              <div class="carousel-item active">
+              <div class="carousel-item active" onClick={() => history.push('/article/'+this.props.articles[4]._id)}>
                 <img class="d-block w-100 zoom" src={this.props.articles[4].imageUrl} alt="First slide"/>
                 <div id="carouseldesc" class="carousel-caption d-none d-md-block slide-desc">
                 <div class='row'>
@@ -34,7 +35,7 @@ class Carousel extends React.Component {
 
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100 zoom" src={this.props.articles[0].imageUrl} alt="Second slide"/>
+                <img class="d-block w-100 zoom" src={this.props.articles[0].imageUrl} alt="Second slide" onClick={() => history.push('/article/'+this.props.articles[0]._id)}/>
                 <div id="carouseldesc" class="carousel-caption d-none d-md-block slide-desc">
                 <div class='row'>
                   <div class="col-sm">
@@ -50,8 +51,8 @@ class Carousel extends React.Component {
                     </Link>
                 </div>
               </div>
-              <div class="carousel-item">
-                <img class="d-block w-100 zoom" src={this.props.articles[2].imageUrl} alt="Third slide"/>
+              <div class="carousel-item" >
+                <img class="d-block w-100 zoom" src={this.props.articles[2].imageUrl} alt="Third slide" onClick={() => history.push('/article/'+this.props.articles[2]._id)}/>
                 <div id="carouseldesc" class="carousel-caption d-none d-md-block slide-desc">
                 <div class='row'>
                   <div class="col-sm">
